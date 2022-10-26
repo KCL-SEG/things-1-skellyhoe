@@ -10,5 +10,5 @@ class Thing(models.Model):
     default=1,
     validators =[
         MaxValueValidator(100),
-        MinValueValidator(1)
+        MinValueValidator(0)
     ])
