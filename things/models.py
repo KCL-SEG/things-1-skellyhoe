@@ -9,6 +9,6 @@ class Thing(models.Model):
     quantity = models.IntegerField(
     blank=False,
     validators=[
-        MaxValueValidator(max_value=100),
-        MinValueValidator(min_value=0)
+        MaxValueValidator(limit_value=100),
+        MinValueValidator(limit_value=0)
     ])
