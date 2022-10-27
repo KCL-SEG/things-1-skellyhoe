@@ -7,8 +7,8 @@ class Thing(models.Model):
     name = models.CharField(max_length=30, blank=False, unique=True)
     description = models.CharField(max_length=120, blank=True, unique=False)
     quantity = models.IntegerField(
-    default=1,
-    validators =[
-        MaxValueValidator(100),
-        MinValueValidator(0)
+    blank=False,
+    validators=[
+        MaxValueValidator(max_value=100),
+        MinValueValidator(min_value=0)
     ])
